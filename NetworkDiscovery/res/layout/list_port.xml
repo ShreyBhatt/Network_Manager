@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/list_ports"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:padding="3dip"
+    android:focusable="false"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:layout_width="0dip"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:gravity="center_vertical"
+        android:layout_gravity="center_vertical">
+
+        <TextView android:id="@+id/list"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="0/tcp (service)"
+            style="@style/ListTextTitle"
+            android:textColor="#ff000000" />
+
+        <TextView android:id="@+id/banner"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Banner"
+            android:maxLines="2"
+            style="@style/ListTextSummary"
+            android:textColor="#ff000000" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/list_connect"
+        android:layout_gravity="center_vertical"
+        style="@style/ButtonConnect"
+        android:textColor="#ff000000" />
+
+</LinearLayout>
+
+
+
+<!--<android.support.v4.widget.DrawerLayout-->
+<!--xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--android:id="@+id/drawer_layout"-->
+<!--android:layout_width="match_parent"-->
+<!--android:layout_height="match_parent">-->
+
+<!--&lt;!&ndash; The main content view &ndash;&gt;-->
+<!--<FrameLayout-->
+    <!--android:id="@+id/content_frame"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent" >-->
+    <!--&lt;!&ndash; Add content here &ndash;&gt;-->
+    <!--<LinearLayout-->
+        <!--xmlns:android="http://schemas.android.com/apk/res/android"-->
+        <!--android:id="@+id/list_ports"-->
+        <!--android:layout_width="fill_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:padding="3dip"-->
+        <!--android:focusable="false"-->
+        <!--android:orientation="horizontal">-->
+
+        <!--<LinearLayout-->
+            <!--android:layout_width="0dip"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_weight="1"-->
+            <!--android:orientation="vertical"-->
+            <!--android:gravity="center_vertical"-->
+            <!--android:layout_gravity="center_vertical">-->
+
+            <!--<TextView android:id="@+id/list"-->
+                <!--android:layout_width="fill_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="0/tcp (service)"-->
+                <!--style="@style/ListTextTitle" />-->
+
+            <!--<TextView android:id="@+id/banner"-->
+                <!--android:layout_width="fill_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="Banner"-->
+                <!--android:maxLines="2"-->
+                <!--style="@style/ListTextSummary" />-->
+
+        <!--</LinearLayout>-->
+
+        <!--<Button-->
+            <!--android:id="@+id/list_connect"-->
+            <!--android:layout_gravity="center_vertical"-->
+            <!--style="@style/ButtonConnect" />-->
+
+    <!--</LinearLayout>-->
+
+<!--</FrameLayout>-->
+
+<!--&lt;!&ndash; The navigation drawer &ndash;&gt;-->
+<!--<ListView android:id="@+id/left_drawer"-->
+    <!--android:layout_width="260dp"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:layout_gravity="start"-->
+    <!--android:choiceMode="singleChoice"-->
+    <!--android:divider="#e5e5e5"-->
+    <!--android:dividerHeight="1dp"-->
+    <!--android:background="#d6d6d6"/>-->
+<!--</android.support.v4.widget.DrawerLayout>-->

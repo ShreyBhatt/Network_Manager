@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+ Copyright (C) 2009-2010 Aubort Jean-Baptiste (Rorist)
+ Licensed under GNU's GPL 2, see README
+-->
+<!--<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--android:layout_width="fill_parent"-->
+<!--android:layout_height="fill_parent">-->
+<!-- -->
+<!--<LinearLayout-->
+<!--android:layout_width="fill_parent"-->
+<!--android:layout_height="wrap_content"-->
+<!--android:orientation="vertical"-->
+<!--android:padding="15dip">-->
+
+<!--<TextView-->
+<!--android:layout_width="fill_parent" -->
+<!--android:layout_height="wrap_content"-->
+<!--android:textSize="24sp"-->
+<!--android:typeface="monospace"-->
+<!--android:text="@string/preferences_help" />-->
+<!-- -->
+<!--<TextView-->
+<!--android:layout_width="fill_parent" -->
+<!--android:layout_height="wrap_content"-->
+<!--android:text="@string/help_discovery_title"-->
+<!--style="@style/help_title" />-->
+<!--<TextView-->
+<!--android:layout_width="fill_parent" -->
+<!--android:layout_height="wrap_content"-->
+<!--android:text="@string/help_discovery_content"-->
+<!--style="@style/help_content" />-->
+<!-- -->
+<!--<TextView-->
+<!--android:layout_width="fill_parent" -->
+<!--android:layout_height="wrap_content"-->
+<!--android:text="@string/help_portscan_title"-->
+<!--style="@style/help_title" />-->
+<!--<TextView-->
+<!--android:layout_width="fill_parent" -->
+<!--android:layout_height="wrap_content"-->
+<!--android:text="@string/help_portscan_content"-->
+<!--style="@style/help_content" />-->
+<!-- -->
+<!--<TextView-->
+<!--android:layout_width="fill_parent" -->
+<!--android:layout_height="wrap_content"-->
+<!--android:text="@string/help_links_title"-->
+<!--style="@style/help_title" />-->
+<!--<TextView-->
+<!--android:layout_width="fill_parent" -->
+<!--android:layout_height="wrap_content"-->
+<!--android:text="@string/help_links_content"-->
+<!--style="@style/help_content"-->
+<!--android:autoLink="web" />-->
+
+<!--</LinearLayout>-->
+<!-- -->
+<!--</ScrollView>-->
+
+
+
+
+<android.support.v4.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- The main content view -->
+    <FrameLayout
+        android:id="@+id/content_frame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+        <!-- Add content here -->
+        <ScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="15dip">
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="24sp"
+                    android:typeface="monospace"
+                    android:text="@string/preferences_help" />
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:typeface="monospace"
+                    android:text="DNS Lookup functionality is used to get the IP address of the particular host name . This
+functionality also allows users to share the output on the different applications.
+ For E.g.
+Input
+Host Name : www.facebook.com
+Output
+IP Address: 31.13.79.220" />
+
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </FrameLayout>
+
+    <!-- The navigation drawer -->
+    <ListView
+        android:background="@color/drawercolor"
+        android:id="@+id/left_drawer"
+        android:layout_width="260dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:choiceMode="singleChoice"
+        android:dividerHeight="1dp"
+        />
+</android.support.v4.widget.DrawerLayout>

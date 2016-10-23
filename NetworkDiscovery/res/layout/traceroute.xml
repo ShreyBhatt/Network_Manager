@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+    
+    
+    <Button
+        android:id="@+id/getip"
+        android:layout_width="147dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ip"
+        android:layout_centerHorizontal="true"
+        android:text="Trace" />
+
+    <EditText
+        android:id="@+id/ip"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:ems="10" >
+
+        <requestFocus />
+    </EditText>
+
+    <TextView
+        android:id="@+id/setdetail"
+        android:layout_width="match_parent"
+        android:layout_height="275sp"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/getip"
+        android:layout_weight="0.39"
+        android:ems="10"
+        android:inputType="textCapSentences|textMultiLine"
+        android:scrollbars="vertical"
+        android:text="Route Details
+" />
+
+</RelativeLayout> -->
+
+<android.support.v4.widget.DrawerLayout
+xmlns:android="http://schemas.android.com/apk/res/android"
+android:id="@+id/drawer_layout"
+android:layout_width="match_parent"
+android:layout_height="match_parent">
+
+<!-- The main content view -->
+<FrameLayout
+    android:id="@+id/content_frame"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+    <!-- Add content here -->
+    
+  <LinearLayout 
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Enter URL" />
+
+    <EditText
+        android:id="@+id/url"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10" />
+
+
+
+      <Button
+        android:id="@+id/trace"
+        android:layout_width="114dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="trace" />
+      <Button
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="Stop"
+          android:layout_gravity="center"
+          android:id="@+id/stop" />
+
+    <TextView
+        android:id="@+id/settracedetail"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="Detail" />
+
+</LinearLayout>
+    </FrameLayout>
+     
+
+
+<!-- The navigation drawer -->
+<ListView
+    android:background="@color/drawercolor"
+    android:id="@+id/left_drawer"
+    android:layout_width="260dp"
+    android:layout_height="match_parent"
+    android:layout_gravity="start"
+    android:choiceMode="singleChoice"
+    android:dividerHeight="1dp"
+    />
+</android.support.v4.widget.DrawerLayout>
+     

@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:orientation="vertical" >-->
+
+    <!--<EditText-->
+        <!--android:id="@+id/editText1"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:hint="Enter Host Name"-->
+        <!--android:ems="10" >-->
+
+        <!--<requestFocus />-->
+    <!--</EditText>-->
+
+    <!--<Button-->
+        <!--android:id="@+id/button1"-->
+        <!--android:layout_width="199dp"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_gravity="center"-->
+        <!--android:text="OK" />-->
+
+    <!--<TextView-->
+        <!--android:id="@+id/textView1"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="80dp"-->
+        <!--android:layout_gravity="center"-->
+        <!--android:text="" />-->
+
+<!--</LinearLayout>-->
+
+
+<android.support.v4.widget.DrawerLayout
+xmlns:android="http://schemas.android.com/apk/res/android"
+android:id="@+id/drawer_layout"
+android:layout_width="match_parent"
+android:layout_height="match_parent">
+
+<!-- The main content view -->
+<FrameLayout
+    android:id="@+id/content_frame"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+    <!-- Add content here -->
+
+    <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <EditText
+            android:id="@+id/editText1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter Host Name"
+            android:ems="10" >
+
+            <requestFocus />
+        </EditText>
+
+        <Button
+            android:id="@+id/button1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Resolve" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Share"
+            android:id="@+id/sharedns"
+            android:layout_gravity="center" />
+         <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Ping IP"
+            android:id="@+id/btnping"
+            android:visibility="invisible"
+            android:layout_gravity="center" />
+       
+   <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/textView0"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:textSize="28sp"
+            
+            
+            android:text="" />
+
+         <TextView
+             android:id="@+id/textView1"
+             android:layout_width="match_parent"
+             android:layout_height="50dp"
+             android:textSize="28sp"
+             
+             android:text="" />
+
+          </LinearLayout>
+
+   
+    
+           
+   
+    </LinearLayout>
+        
+        
+
+
+</FrameLayout>
+
+<!-- The navigation drawer -->
+<ListView
+    android:background="@color/drawercolor"
+    android:id="@+id/left_drawer"
+    android:layout_width="260dp"
+    android:layout_height="match_parent"
+    android:layout_gravity="start"
+    android:choiceMode="singleChoice"
+    android:dividerHeight="1dp"
+    />
+</android.support.v4.widget.DrawerLayout>

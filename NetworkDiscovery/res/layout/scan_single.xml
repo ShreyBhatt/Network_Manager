@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dip"
+        android:layout_marginRight="15dip"
+        android:layout_marginBottom="5dip"
+        android:text="@string/scan_single_summary" />
+    <EditText
+        android:id="@+id/ip"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dip"
+        android:layout_marginRight="15dip"
+        android:lines="1"
+        android:inputType="textUri" />
+</LinearLayout>
+
+
+<!--<android.support.v4.widget.DrawerLayout-->
+<!--xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--android:id="@+id/drawer_layout"-->
+<!--android:layout_width="match_parent"-->
+<!--android:layout_height="match_parent">-->
+
+<!--&lt;!&ndash; The main content view &ndash;&gt;-->
+<!--<FrameLayout-->
+    <!--android:id="@+id/content_frame"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent" >-->
+    <!--&lt;!&ndash; Add content here &ndash;&gt;-->
+    <!--<LinearLayout-->
+        <!--xmlns:android="http://schemas.android.com/apk/res/android"-->
+        <!--android:layout_width="fill_parent"-->
+        <!--android:layout_height="fill_parent"-->
+        <!--android:orientation="vertical">-->
+        <!--<TextView-->
+            <!--android:layout_width="fill_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginLeft="15dip"-->
+            <!--android:layout_marginRight="15dip"-->
+            <!--android:layout_marginBottom="5dip"-->
+            <!--android:text="@string/scan_single_summary" />-->
+        <!--<EditText-->
+            <!--android:id="@+id/ip"-->
+            <!--android:layout_width="fill_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginLeft="15dip"-->
+            <!--android:layout_marginRight="15dip"-->
+            <!--android:lines="1"-->
+            <!--android:inputType="textUri" />-->
+    <!--</LinearLayout>-->
+
+<!--</FrameLayout>-->
+
+<!--&lt;!&ndash; The navigation drawer &ndash;&gt;-->
+<!--<ListView android:id="@+id/left_drawer"-->
+    <!--android:layout_width="260dp"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:layout_gravity="start"-->
+    <!--android:choiceMode="singleChoice"-->
+    <!--android:divider="#e5e5e5"-->
+    <!--android:dividerHeight="1dp"-->
+    <!--android:background="#d6d6d6"/>-->
+<!--</android.support.v4.widget.DrawerLayout>-->
+
+

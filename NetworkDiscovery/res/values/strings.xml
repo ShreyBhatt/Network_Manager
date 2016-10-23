@@ -1,0 +1,460 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+    <string name="system_property">System Property</string>
+    <string name="app_name">Network Discovery</string>
+    <string name="app_loading">Loading</string>
+    <string name="btn_yes">Yes</string>
+    <string name="btn_no">No</string>
+    <string name="btn_ok">Ok</string>
+    <string name="btn_discover">Discover</string>
+    <string name="btn_discover_cancel">Cancel</string>
+    <string name="btn_export">Export</string>
+    <string name="btn_close">Close</string>
+    <string name="btn_scan">Scan</string>
+    <string name="btn_options">Options</string>
+    <string name="btn_back">Back</string>
+    <string name="btn_info">Info</string>
+    <string name="btn_ports">Ports</string>
+    <string name="btn_remove">Remove</string>
+    
+    <string name="task_db">Downloading and installing %s database ...</string>
+    <string name="task_services">Creating Services database ...\nThis may take a while ...</string>
+ 
+    <string name="package_missing">%s must be installed from the market !</string>
+    
+    <string name="wifi_enabled">Wifi is enabled</string>
+    <string name="wifi_enabling">Wifi is enabling</string>
+    <string name="wifi_disabling">Wifi is disabling</string>
+    <string name="wifi_disabled">Wifi is disabled</string>
+    <string name="wifi_scanning">Wifi is scanning</string>
+    <string name="wifi_associating">Wifi is associating with %s</string>
+    <string name="wifi_dhcp">Obtaining IP address from %s</string>
+    <string name="wifi_unknown">Wifi state unknown</string>
+    
+    <string name="net_ip">IP: %1$s/%2$d (%3$s)</string>
+    <string name="net_carrier">CARRIER: %s</string>
+    <string name="net_ssid">SSID: %s</string>
+    <string name="net_mode">MODE: %s</string>
+    <string name="net_mode_wifi">WiFi (%1$s %2$s)</string>
+    <string name="net_mode_mobile">Mobile</string>
+    <string name="net_mode_eth">Ethernet (Not supported yet)</string>
+    <string name="net_mode_unknown">Unknown</string>
+    
+    <string name="discover_start">Discovery started ...</string>
+    <string name="discover_finished">Discovery finished !</string>
+    <string name="discover_canceled">Discovery canceled !</string>
+    <string name="discover_proxy_title">Proxy Error</string>
+    <string name="discover_proxy_msg">Discovery is canceled, because a mac address appeared multiple times, you probably are behind a proxy.\n\nGo to your Gateway from the browser : http://%s</string>
+    <string name="discover_root_title">Installation: Root</string>
+    <string name="discover_root_install">Do you want to install the scan daemon for root ?</string>
+    <string name="discover_root_restart">Restarting application ...</string>
+    <string name="discover_empty">Press Discover to start</string>
+    <string name="discover_action_title">Choose an action</string>
+    <string name="discover_action_scan">Scan ports</string>
+    <string name="discover_action_rename">Change name</string>
+    <string name="discover_action_saved">Name saved!</string>
+    <string name="discover_action_deleted">Name deleted!</string>
+    <string name="discover_myphone_name">MyPhone</string>
+        
+    <string name="scan_single_title">Scan IP</string>
+    <string name="scan_single_summary">Enter an IP address or FQDN to scan, i.e. scanme.nmap.org</string>
+    <string name="scan_noport">No open port found !</string>
+    <string name="scan_noaction">No associated action !</string>
+    <string name="scan_connect">Connect</string>
+    <string name="scan_start">Scan started ...</string>
+    <string name="scan_finished">Scan finished !</string>
+    <string name="scan_canceled">Scan canceled !</string>
+    <string name="scan_open">Open (%s)</string>
+    <string name="scan_closed">Closed (%s)</string>
+    <string name="scan_host_unreachable">Host unreachable !</string>
+    <string name="scan_banner_title">Port %s/tcp</string>
+    
+    <string name="info_time">Response time:</string>
+    <string name="info_mac">MAC Address:</string>
+    <string name="info_nic">NIC vendor:</string>
+    <string name="info_ports_open">Open ports:</string>
+    <string name="info_ports_closed">Closed ports:</string>
+    <string name="info_unknown">Unknown</string>
+    
+    <string name="export_finished">File saved !</string>
+    <string name="export_choose">Choose file destination</string>
+    <string name="export_save">Save</string>
+    <string name="export_exists_title">File already exists</string>
+    <string name="export_exists_msg">Do you want to overwrite ?</string>
+    
+    <string name="help_discovery_title">Hosts discovery</string>
+    <string name="help_discovery_content">The method that is being used, does not need to have root privileges. In future release there will be more advanced techniques, once the non-root ones are polished.\n\nHere is how it works: \n1. Calculate the subnetwork range\n2. Iterate throught IP and query them\n3. First it sends an ICMP ping or Echo on tcp/7 (with InetAddress.isReachable())\n4. If it does not work, it tries to connect() on well known open tcp ports such as: 135, 139, 22, 111, 80\n5. If none of the above is successful, the host is not discovered</string>
+    <string name="help_portscan_title">Port scan</string>
+    <string name="help_portscan_content">Port scan is event driven, using Java\'s Selector and SocketChannel.\nThere is a fake timeout by registrering the time in ms at socket\'s creation and checking regularly this value.\nThe port scan method, as discovery, uses full tcp connection check. (will be more granular in the future with root features.)\n\nA maximum of 127 Sockets are opened at a time, so this is not always accurate, but quite fast. Again, a new feature is coming that will adapt times between requests according to host response time (kind of software network congestion control)\n\nA port is considered open when tcp connect() is fully successful, closed when no service is listening on the other end, or filtered when the timeout is reached.</string>
+    <string name="help_links_title">Links</string>
+    <string name="help_links_content">- TCP connect scan: http://nmap.org/book/man-port-scanning-techniques.html#id421401\n\n- Host discovery: http://nmap.org/book/man-host-discovery.html</string>
+    
+    <string name="preferences_help">Help</string>
+    <string name="preferences_export">Export</string>
+    <string name="preferences_credits">Credits</string>
+    <string name="preferences_discover">Discovery</string>
+    <string name="preferences_portscan">Port Scan</string>
+    <string name="preferences_advanced">General</string>
+    
+    <string name="preferences_donate">Donate: If you like this app, you can buy me a beer.</string>
+    <string name="preferences_resolve_name_title">Resolve Hostname</string>
+    <string name="preferences_resolve_name_summary">Use system DNS to resolve ip addresses</string>
+    <string name="preferences_vibrate_title">Vibrate</string>
+    <string name="preferences_vibrate_summary">Vibrate when Scan is completed</string>
+    <string name="preferences_ratecontrol_enable_title">Rate control</string>
+    <string name="preferences_ratecontrol_enable_summary">Enable automatic rate detection</string>
+    <string name="preferences_timeout_discover_title">Custom rate</string>
+    <string name="preferences_timeout_discover_summary">Rate of discovery in millisecondes</string>
+    <string name="preferences_port_start_title">First Port</string>
+    <string name="preferences_port_start_summary">First TCP Port to scan. 1-65535</string>
+    <string name="preferences_port_end_title">Last Port</string>
+    <string name="preferences_port_end_summary">Last TCP Port to scan. 1-65535</string>
+    <string name="preferences_banner_title">Services banners</string>
+    <string name="preferences_banner_summary">Read banner from a connected socket (ex.: SSH-2.0-OpenSSH_5.1p1)</string>
+    <string name="preferences_timeout_force_title">Custom timeout</string>
+    <string name="preferences_timeout_force_summary">Manually set connect timeout</string>
+    <string name="preferences_timeout_title">Connect timeout</string>
+    <string name="preferences_timeout_summary">Timeout of a port connection in millisecondes</string>
+    <string name="preferences_allow_mobile_title">Allow mobile discovery</string>
+    <string name="preferences_allow_mobile_summary">Scan over edge/3g/... usually leading to strange results, if any</string>
+    <string name="preferences_ssh_user_title">SSH User</string>
+    <string name="preferences_ssh_user_summary">Username for the SSH connection</string>
+    <string name="preferences_threads_title">Threads pool</string>
+    <string name="preferences_threads_summary">Maximum number of threads to use in host discovery (1-256)</string>
+    <string name="preferences_resetdb_title">Update NIC Database</string>
+    <string name="preferences_resetdb_summary">Pull and update MAC addresses database</string>
+    <string name="preferences_resetdb_action">Do you want to download %1$s ? (~%2$sk)</string>
+    <string name="preferences_resetdb_ok">Database updated ! %s new entries ...</string>
+    <string name="preferences_version_title">Version</string>
+    <string name="preferences_website_title">Website</string>
+    <string name="preferences_email_title">Contact</string>
+    <string name="preferences_intf_title">Network interface</string>
+    <string name="preferences_intf_summary">Choose which interface to use</string>
+    <string name="preferences_discover_method_title">Discover Method</string>
+    <string name="preferences_discover_method_summary">Change to different method of host discovery</string>
+    <string name="preferences_discover_method_title_dialog">Choose a method</string>
+    <string name="preferences_ip_start_title">IP start</string>
+    <string name="preferences_ip_start_summary">First IP address to scan</string>
+    <string name="preferences_ip_end_title">IP end</string>
+    <string name="preferences_ip_end_summary">Last IP address to scan</string>
+    <string name="preferences_ip_custom_title">Custom IP range</string>
+    <string name="preferences_ip_custom_summary">Manually set start/end IPs</string>
+    <string name="preferences_cidr_custom_title">Custom CIDR</string>
+    <string name="preferences_cidr_custom_summary">Manually set CIDR (defines subnet)</string>
+    <string name="preferences_cidr">Change CIDR</string>
+    
+    <string name="preferences_error1">Error: First is bigger than Last !</string>
+    <string name="preferences_error2">Error: Number of Threads must be between 1 and 256 !</string>
+    <string name="preferences_error3">Error: File transfer interrupted !</string>
+    <string name="preferences_error4">Error: Value is not a valid IP address !</string>
+
+    <string name="activity_button">Launch</string>
+    <string name="no_connectivity">No connectivity</string>
+    <string name="no_text">Please enter an ip or URL</string>
+    <string name="no_ping">Are you sure about the URL?</string>
+    <string name="string_test">test</string>
+    <string name="error">An error occurred, please try again</string>
+    <string name="timeout">Timeout</string>
+    <string name="placeholder">www.google.fr</string>
+    
+    
+    <string-array name="method_discover_name">
+        <item>Ping/connect (default)</item>
+        <item>DNS requests</item>
+    </string-array>
+
+    <!--<string name="app_name">NavigationDrawer</string>-->
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+
+    <string-array name="nav_drawer_items">
+        <item>Network Discovery</item>
+        <item>Ping</item>
+        <item>Multi Ping</item>
+        <item>DNS Lookup</item>
+        <item>IPv4 Calculator</item>
+        <item>Traceroute</item>
+        <item>System Properties</item>
+        <item>System Performance</item>
+
+    </string-array>
+
+    <array name="nav_drawer_icons">
+        <item>@drawable/discovery</item>
+        <item>@drawable/ping</item>
+        <item>@drawable/multiping</item>
+
+        <item>@drawable/dns</item>
+        <item>@drawable/ipcalculator</item>
+       
+        <item>@drawable/traceroute</item>
+        <item>@drawable/systemproperty</item>
+        <item>@drawable/cpuperformance</item>
+
+
+    </array>
+
+
+
+
+
+
+
+
+    <!--<string name="app_name">Emmagee</string>-->
+    <string name="setting">Settings</string>
+    <string name="exit">Exit</string>
+
+    <string name="start_test">Start Test</string>
+    <string name="stop_test">Stop Test</string>
+
+    <string name="collecting_frequency">Collecting Interval(s)</string>
+    <string name="sender">Sender:</string>
+    <string name="password">Password:</string>
+    <string name="smtp">SMTP Server:</string>
+    <string name="receiver">Receivers(separated by space):</string>
+    <string name="floating_window">Show Floating Window</string>
+    <string name="save">Save</string>
+
+    <string name="calculating">Calculating...</string>
+    <string name="open_wifi">WIFI Off</string>
+    <string name="close_wifi">WIFI On</string>
+    <string name="process_free_mem">App/Available Memory:</string>
+    <string name="process_overall_cpu">App/System CPU:</string>
+    <string name="start_time">Start Time:</string>
+    <string name="total_usage">\u0020Total Usage(%)</string>
+    <string name="process_package">Package Name</string>
+    <string name="process_name">App Name</string>
+    <string name="process_pid">App PID</string>
+    <string name="mem_size">Device Memory Size(MB)</string>
+    <string name="cpu_type">Device CPU Type</string>
+    <string name="android_system_version">Android Version</string>
+    <string name="mobile_type">Device Brand/Model</string>
+    <string name="timestamp">Timestamp</string>
+    <string name="used_mem_PSS">App Used Memory PSS(MB)</string>
+    <string name="used_mem_ratio">App Used Memory(%)</string>
+    <string name="mobile_free_mem">System Available Memory(MB)</string>
+    <string name="app_used_cpu_ratio">App Used CPU(%)</string>
+    <string name="total_used_cpu_ratio">Total Used CPU(%)</string>
+    <string name="traffic">Net Traffic(KB)</string>
+    <string name="battery">Battery(%)</string>
+    <string name="current">Current(mA)</string>
+    <string name="temperature">Temperature(C)</string>
+    <string name="voltage">Voltage(V)</string>
+    <string name="fps">FPS</string>
+    <string name="stat_error">Stat Error</string>
+
+    <string name="comment1">Note: for unsupported devices refer to: https://github.com/NetEase/Emmagee/wiki/Some-devices-are-not-supported</string>
+    <string name="comment2">Current: negative for discharging while positive for charging</string>
+    <string name="comment3">Start time: empty means either the app has been started or failed to fetch start time</string>
+    <string name="comment4">N/A: not supported or data exception</string>
+
+    <string name="can_not_start_app_toast">The app can not be launched</string>
+    <string name="choose_app_toast">Please select target app</string>
+    <string name="test_result_file_toast">Test result file:</string>
+    <string name="save_success_toast">Saved</string>
+    <string name="sender_mail_toast">Sender\'s email:</string>
+    <string name="receiver_mail_toast">Receiver\'s email:</string>
+    <string name="format_incorrect_format">Invalid email format</string>
+    <string name="info_incomplete_toast">Incomplete email settings</string>
+    <string name="wifi_fail_toast">Failed to set WIFI</string>
+    <string name="send_success_toast">Test result has been sent to:</string>
+    <string name="send_fail_toast">Test result failed to be sent to your mailbox, saved at:</string>
+
+    <string name="ok">OK</string>
+    <string name="cancel">Cancel</string>
+    <string name="confirm">Are you sure to exit？</string>
+    <string name="quite_alert">Click again to exit</string>
+
+    <string name="about">About</string>
+    <string name="mail_settings">Mail Settings</string>
+    <string name="version_title">Version </string>
+    <string name="about_emmagee_intro">Emmagee is a practical, handy performance test tool for specified
+         Android App, which can monitor CPU, memory, network traffic, battery current and status.
+         Additionally, it also provides several cool features such as customizing interval of collecting
+         data, rendering real-time process status in a floating window, and much more.</string>
+    <string name="about_team">Team：QA, Netease(Hangzhou)</string>
+    <string name="about_project_address">Project Site：https://github.com/NetEase/Emmagee</string>
+
+    <string name="top_activity">Top Activity Name</string>
+    <string name="csv_encoding">UTF-8</string>
+    <string name="dalvik_heap">Dalvik heap alloc/size(KB)</string>
+    <string name="native_heap">Native heap alloc/size(KB)</string>
+
+    <string name="collect_heap">Collect Heap</string>
+    <string name="root_notification">(root is necessary)</string>
+    <string name="root_failed_notification">Fail to get root permission, please check if this phone is rooted</string>
+    <string name="stop_when_exited">Stop monitoring when app exited</string>
+
+
+
+
+
+
+    <string name="google_play_app_site">https://play.google.com/store/apps/details?id=info.lamatricexiste.network</string>
+    <string name="anim_time">100</string>
+    <string name="notify_read">AnotherMonitor is reading values</string>
+    <string name="notify_read2">Reading values in the background</string>
+    <string name="notify_record">AnotherMonitor is recording values</string>
+    <string name="notify_record2">Recording values in the background</string>
+    <string name="notify_toast_saved">saved in the folder \'AnotherMonitor\'.</string>
+    <string name="notify_toast_error">An error happened when saving the CSV file:</string>
+    <string name="notify_toast_error_2">It hasn\'t been possible to start recording:</string>
+    <string name="w_main_choose_process">Choose other process(es)</string>
+    <string name="w_main_processes">Processes</string>
+    <string name="w_main_memory">Memory</string>
+    <string name="w_main_hide">Hide</string>
+    <string name="w_main_remove_all">Remove All</string>
+    <string name="w_main_feedback_title">Just one second ;)</string>
+    <string name="w_main_feedback_text">You\'ve been using AnotherMonitor for a while.
+        \n\nYour feedback is invaluable to improve the app. Would you like to rate the app on Google Play? (It\'s 30 seconds).</string>
+    <string name="w_main_feedback_yes">Yes</string>
+    <string name="w_main_feedback_done">I\'ve already done it</string>
+    <string name="w_main_feedback_done_thanks">Thanks for your rate!</string>
+    <string name="w_main_feedback_no">No</string>
+    <string name="w_main_feedback_no_remind">You\'ll be reminded in three months.</string>
+    <string name="w_main_welcome">Welcome!</string>
+    <string name="w_main_hint_title">FYI</string>
+    <string name="w_main_hint">Enable and disable parameters shown on the graph by pressing its label.
+        \n\nYou can open the Settings panel by clicking the graph.</string>
+    <string name="w_main_mp_button_text">Alright</string>
+    <string name="w_processes_dead">DEAD</string>
+    <string name="w_processes_dead_notification">Process dead</string>
+    <string name="w_processes_title">Processes</string>
+    <string name="w_processes_empty">Ouch! There was some problem when retrieving the system processes.</string>
+    <string name="w_processes_android_51_problem"><big><b>Ouch!</b></big>
+		\n\nFor Android 5.1.1+ the processes list doesn\'t work anymore.
+		It\'s due to an undocumented Android API change. Still trying to find out some workaround.
+		\n\nMore info: http://stackoverflow.com/questions/30619349/android-5-1-1-and-above-getrunningappprocesses-returns-my-application-packag</string>
+    <string name="w_processes_first_time">You can remove a process from the list by performing a long click on its label.</string>
+    <string name="w_processes_select_some_process">Please select some process(es).</string>
+    <string name="w_help_title">Some explanations?</string>
+    <string name="w_help_text">In the main window you can open the Settings panel by pressing the graph.
+        There you can set the \'Read interval\', the \'Update interval\' and the \'Graph interval width\' settings.
+        The \'Real interval\' setting cannot be modified when the app is recording.
+        \n\n<big><b>Processes</b></big>
+        \n\nYou can see the total CPU and memory usage of all processes currently running on the system.
+		If the device has more than one core the CPU usage will be the sume of all cores\' CPU usage.
+		Add processes by pressing \'Choose other process(es)\' button.
+        AnotherMonitor process will always be shown in the list. Switch between CPU and memory usage by pressing the \'Memory\' button.
+        The memory monitored and shown by AnotherMonitor is the Total Private Dirty.
+        If Android kills a process due to low memory
+        or the process finishes itself, \'DEAD\' will be shown.
+        You can disable or re-enable showing the process on the graph by pressing its label.
+        You can remove the process from the list by performing a long press on its label.
+        \n\nIn order to get CPU usage the app does not make use of the \'Top\' Linux command but instead it parses the
+        \'/proc/stat\' file and does calculations with the user and system time.
+        \n\nMore info about CPU usage in Linux:
+        \n- http://stackoverflow.com/questions/1420426/calculating-cpu-usage-of-a-process-in-linux
+        \n\n<big><b>Memory</b></big>
+        \n\nAnotherMonitor shows on screen the device\'s most relevant memory parameters. They are both parameterts related with Linux and Android:
+        \n\n<b>Mem used</b>: the memory which is already in use by the system.
+        \n\n<b>Mem available</b>: the available memory on the system. This number should not be considered absolute: due to the nature of
+        the kernel, a significant portion of this memory is actually in use and needed for the overall system to run well. <b>Mem available</b> is
+        the sum of <b>MemFree</b> and <b>Cached</b>.
+        \n\n<b>MemFree</b>: The sum of <b>LowFree</b> plus <b>HighFree</b> (not shown on the graph since they\'re not relevant in terms of app developing).
+        By default this parameter is disabled on the graph.
+        \n\n<b>Cached</b>: in-memory cache for files read from the disk (the pagecache). By default this parameter is disabled on the graph.
+        \n\n<b>Threshold</b>: The threshold of <b>Mem available</b> at which Android considers memory to be low and start killing background services and other
+        non-extraneous processes. This is a parameter exclusive for Android not present on Linux.
+        \n\nFind more information about memory:
+        \n<b>In Android:</b>
+                  \n- http://developer.android.com/tools/debugging/debugging-memory.html
+                  \n- http://developer.android.com/reference/android/app/ActivityManager.MemoryInfo.html
+        \n<b>In Linux:</b>
+                  \n- https://en.wikipedia.org/wiki/Procfs
+                  \n- https://www.kernel.org/doc/Documentation/filesystems/proc.txt
+        \n\n<big><b>Recording</b></big>
+        \n\nAnotherMonitor can record in a CSV file the CPU usage and memory values for later usage and processing in a spreadsheet program.
+        Just press the circular red button on the main window to start recording. Then you can select and add other app process
+        to the graph by pressing the \'Choose other process(es)\' button and then bring the app to the foreground. AnotherMonitor will record the CPU usage of that app while it is being used.
+        To stop recording just press the white square icon or press the \'Stop and save\' action button from the AnotherMonitor entry in the system bar.
+        Values will be recorded at the pace indicated in the \'Read interval\' setting of the \'Settings\' panel.
+        \n\nWhen recording, AnotherMonitor writes all the CPU usage and memory parameters to disk no matter whether they are being shown on the graph or not.
+        \n\nThe recorded files are saved on the SD space of your device in the \'AnotherMonitor\' folder.</string>
+    <string name="menu_record">Record</string>
+    <string name="menu_record_description">Starts recording memory and CPU parameters in the background</string>
+    <string name="menu_record_stop_description">Stops recording and saves CSV file</string>
+    <string name="menu_stop_record">Stop and save</string>
+    <string name="menu_settings_description">Opens Settings panel</string>
+    <string name="menu_help">Help</string>
+    <string name="menu_about">About</string>
+    <string name="menu_close">Close</string>
+    <string name="button_ok">OK</string>
+    <string name="button_cancel">Cancel</string>
+    <string name="button_reset">Reset to Defaults</string>
+    <string name="graphic_update_interval">Update interval</string>
+    <string name="graphic_paused">Graph paused</string>
+    <string name="graphic_recording">Recording&#8230;</string>
+    <string name="interval_read">Read interval:</string>
+    <string name="interval_update">Update interval:</string>
+    <string name="interval_width">Graph interval width:</string>
+    <string name="tab_main">Main</string>
+	<string name="tab_main_text">Set the frequency which memory and CPU parameters are read, the frequency the graph and labels are updated and the graph interval width.
+	    \n\nThe update interval must be equal or higher than the read interval. If the read interval is modified the graph will be reset.</string> <!--  The higher values, the less resources consumed. -->
+    <string name="tab_main_alert_text">The update interval must be equal or higher than the	read interval. Change these intervals or press \'Reset to Defaults\'.</string>
+    <string name="tab_main_alert_title">Hey!</string>
+    <string name="tab_main_alert_ok">OK</string>
+    <string name="tab_show">Show/Record</string>
+	<string name="tab_show_text">Select the parameters you want to be shown on the graph.
+	    These parameters will be the same that will be recorded when the recording mode is on.
+	    \n\nThe generated CSV files are saved on the \'data/data/info.lamatricexiste.network/files\' folder.
+	    \n\nYou can also check/uncheck these parameters stright from the main window by pushing on the name of the parameters.</string>
+    <string name="tab_show_select_all">Select All</string>
+    <string name="tab_show_unselect_all">Unselect All</string>
+    <string name="read_interval_text">Read parameters every:</string>
+    <string name="read_interval_prompt">Read interval (s):</string>
+    <string-array name="read_interval_array">
+        <item>0.5 s</item>
+        <item>1 s</item>
+        <item>2 s</item>
+        <item>4 s</item>
+    </string-array>
+    <string name="update_interval_text">Update labels and graph every:</string>
+    <string name="update_interval_prompt">Update interval (s):</string>
+    <string-array name="update_interval_array">
+        <item>1 s</item>
+        <item>2 s</item>
+        <item>4 s</item>
+        <item>8 s</item>
+    </string-array>
+    <string name="width_interval_text">Graph interval width:</string>
+    <string name="width_interval_prompt">Width interval (dp):</string>
+    <string-array name="width_interval_array">
+        <item>1 dp</item>
+        <item>2 dp</item>
+        <item>5 dp</item>
+        <item>10 dp</item>
+    </string-array>
+    <string name="p_cpuusage">CPU Usage</string>
+    <string name="p_cputotalusage">Total CPU usage</string>
+    <string name="p_cpuanothermonitor">AnotherMonitor</string>
+    <string name="p_memtotal">Memory</string>
+    <string name="p_memused">Mem used</string>
+    <string name="p_memavailable">Mem available</string>
+    <string name="p_memfree">MemFree</string>
+    <string name="p_cached">Cached</string>
+    <string name="p_threshold">Threshold</string>
+    <string name="p_kb">- kB</string>
+    <string name="p_percentage">-%</string>
+    <string name="about_title">About</string>
+	<string name="about_text_title">
+		<big><b>AnotherMonitor</b> v3.0.6</big>
+		\nhttps://github.com/AntonioRedondo/AnotherMonitor
+		\n\n© 2010&#8211;2016 Antonio Redondo
+		\nhttp://antonioredondo.com
+		\n\nPublished under the
+		\nGNU General Public License v3
+		\n\nChuck Norris approves this application.</string>
+	<string name="about_text">
+		\n\nAnotherMonitor monitors and records the CPU usage and memory parameters of Android devices.
+		\n\nChuck Norris approves this application.
+	</string>
+    <string name="about_feedback_text">Write or edit your review</string>
+    <string name="about_feedback_button">AnotherMonitor on Google Play</string>
+    <string name="about_gnugpl_text">GNU General Public License v3</string>
+    <string name="about_gnugpl_link">https://gnu.org/licenses/gpl.html</string>
+    <string name="cd_paramter_status_icon">Parameter status icon</string>
+    <string name="content_description_logo_app">Logo app</string>
+</resources>
