@@ -7,13 +7,21 @@ Features:
 ? Network : Discovers all devices connected to a Wi-Fi network
   Displays IP address, MAC address
   Checks the availability of Internet connection
+  
 ? IP Calculator : Shows you the subnet host address range, the subnet ID, and the subnet broadcast address for given input IP address with CIDR notation. The binary representation and hexadecimal representations of IP addresses are supported.
+
 ? Device manager : Enter your own names for eachdevice
+
 ? Sharing : Share information via Twitter, Facebook, Message andE-mail
+
 ? Port Scanner: Find hundreds of open ports in a fewseconds
+
 ? Network Performance : Understand your network performances by packet loss percentage, TTL, delay time using Ping andTraceroute
-? System Properties : Enlists the system properties of localhost.
-? System performance : Displays memory and CPU utilization, representation using graph is also supported.
+
+? System Properties : Enlists the system properties of localhost
+
+? System performance : Displays memory and CPU utilization, representation using graph is also supported
+
 ? Misc Services:-
     DNS lookup
     TCP Port Scanner (connect() scan)
